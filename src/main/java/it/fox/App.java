@@ -19,7 +19,7 @@ import org.eclipse.jetty.webapp.WebAppContext;
 public final class App {
 
     private static Logger logger = LogManager.getLogger(App.class);
-    private static final boolean IS_PRODUCTION_MODE = true;
+    private static final boolean IS_PRODUCTION_MODE = false;
     public static void main(String[] args) throws Exception {
     
 
@@ -30,6 +30,8 @@ public final class App {
 
         if (IS_PRODUCTION_MODE) {
             System.setProperty("vaadin.productionMode", "true");
+        } else {
+            System.setProperty("vaadin.productionMode", "false");
         }
 
         final WebAppContext context = new WebAppContext();

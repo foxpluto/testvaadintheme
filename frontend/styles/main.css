@@ -67,6 +67,14 @@ html {
   }
 
   vaadin-app-layout::part(drawer) {
-    width: 8em;
+    width: 9em;
   }
+
+  vaadin-dialog-overlay::part(backdrop) {
+    background-color: var(--lumo-shade-60pct);
+  }
+  vaadin-dialog-overlay::part(content) {
+    background-color: rgba(20, 20, 20, 1);
+  }
+
   

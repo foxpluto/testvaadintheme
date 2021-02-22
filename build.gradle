@@ -16,7 +16,7 @@ eclipse {
         file {
             whenMerged {
                 def src = entries.find { it.path == 'src/main/java' }
-                src.output = "/$eclipse.project.name/classes/main-java"
+                src.output = "/$eclipse.project.name/classes/main"
             }
         }
     }
@@ -36,7 +36,7 @@ java {
 
 vaadin {
     pnpmEnable = true
-    productionMode = true
+    productionMode = false
 }
 
 dependencies {
